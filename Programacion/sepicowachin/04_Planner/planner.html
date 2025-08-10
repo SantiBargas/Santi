@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Planificador de Actividades</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Planifica tus días y horarios de entrenamiento</h1>
+        <p>A continuación, podrás seleccionar los días y horarios en los que quieres entrenar cada actividad. Selecciona una o más actividades en cualquier franja horaria y día que desees.</p>
+
+        <form id="actividadForm">
+            <label for="dia">Día:</label>
+            <select id="dia">
+                <option value="Lunes">Lunes</option>
+                <option value="Martes">Martes</option>
+                <option value="Miércoles">Miércoles</option>
+                <option value="Jueves">Jueves</option>
+                <option value="Viernes">Viernes</option>
+                <option value="Sábado">Sábado</option>
+                <option value="Domingo">Domingo</option>
+            </select>
+
+            <label for="horaInicio">Hora de Inicio:</label>
+            <input type="time" id="horaInicio" required>
+
+            <label for="horaFin">Hora de Fin:</label>
+            <input type="time" id="horaFin" required>
+
+            <label for="actividad">Actividad:</label>
+            <select id="actividad">
+                <option value="Pesas">Pesas</option>
+                <option value="Cardio">Cardio</option>
+                <option value="Natación">Natación</option>
+                <option value="Correr">Correr</option>
+                <option value="Saltar la cuerda">Saltar la cuerda</option>
+            </select>
+
+            <button type="button" id="agregarActividad">Agregar Actividad</button>
+            <button id="generarCalendario">Generar Calendario</button>
+        </form>
+
+        
+        <div id="calendarioGenerado"></div>
+
+        <div id="calendario"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

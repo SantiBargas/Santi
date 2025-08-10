@@ -1,0 +1,122 @@
+/* Reseteo básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo de fuente general */
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+/* Encabezado principal con imagen de fondo */
+.hero {
+    background: url('https://i.pinimg.com/originals/dc/00/65/dc00658fa7349235fbe6075b55441fea.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Capa de superposición para oscurecer la imagen */
+.hero .overlay {
+    background-color: rgba(0, 0, 0, 0.7); /* Color negro transparente */
+    padding: 2rem;
+    text-align: center;
+    border-radius: 10px; /* Bordes redondeados */
+    max-width: 450px; /* Ajusta el ancho máximo */
+    width: 100%; /* Ancho completo en dispositivos pequeños */
+}
+
+/* Estilo del título */
+.hero h1 {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+/* Estilo del formulario */
+.data-form input,
+.data-form select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Botón de envío */
+.data-form .btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #e74c3c; /* Rojo brillante */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.data-form .btn:hover {
+    background-color: #c0392b; /* Rojo más oscuro al pasar el mouse */
+}
+
+/* Estilos adicionales para actividades */
+h2 {
+    font-size: 1.5rem;
+    color: white;
+    margin-top: 1.5rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+    color: white;
+    margin-top: 1.2rem;
+    text-align: left;
+}
+
+.actividad-objetivo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+}
+
+.actividad {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 1rem;
+}
+
+.actividad label {
+    margin-right: 10px;
+}
+
+.dias {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 1rem;
+}
+
+.dias input {
+    width: 50px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+/* Mejora de los inputs de checkbox */
+.actividad input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.2);
+}

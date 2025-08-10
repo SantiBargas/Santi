@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="freeCodeCamp Accessibility Quiz practice project" />
+    <title>Accessibility Quiz</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+        <img id="logo" src="dabbb.png">
+      <h1 id="titulo-intro" class="titulo_intro">AGRUPACION ARMANDO DABIN</h1>
+      <nav>
+        <ul>
+            <li><a href="#historia">HISTORIA</a></li>
+            <li><a href="#m40">M40</a></li>
+            <li><a href="#libre">LIBRE</a></li>
+          </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="historia">
+          <h2>HISTORIA</h2>
+          <p>ESTA ES LA HISTORIA DE DABIN.</p>
+        </section>
+    
+        <section id="m40">
+          <h2>M40</h2>
+          <p>ESTA ES LA INFO M40.</p>
+        </section>
+    
+        <section id="libre">
+          <h2>LIBRE</h2>
+          <p>ESTA ES LA INFO DE LA LIBRE.</p>
+        </section>
+      </main>
+    
+      <script>
+        // Agrega un evento de clic a todos los enlaces de navegación
+        document.querySelectorAll('nav a').forEach(function(enlace) {
+          enlace.addEventListener('click', function(evento) {
+            evento.preventDefault(); // Previene el comportamiento predeterminado del enlace
+            const destino = this.getAttribute('href'); // Obtiene el destino del enlace
+            const seccion = document.querySelector(destino); // Encuentra la sección correspondiente
+            const contenedor = seccion.parentElement; // Encuentra el contenedor de la sección
+            const posicion = contenedor.offsetTop; // Obtiene la posición del contenedor
+            window.scrollTo({ top: posicion, behavior: 'smooth' }); // Desplaza la ventana suavemente al inicio de la sección
+          });
+        });
+      </script>
+
+    <footer>
+        <address>
+          <a href="https://freecodecamp.org">freeCodeCamp</a><br />
+          San Francisco<br />
+          California<br />
+          USA<br/r>
+          San Francisco<br />
+          California<br />
+          USA<br/r>
+          San Francisco<br />
+          California<br />
+          USA<br/r>
+          San Francisco<br />
+          California<br />
+          USA<br/r>
+          San Francisco<br />
+          California<br />
+          USA<br/r>
+          San Francisco<br />
+          California<br />
+          USA<br/r>
+          San Francisco<br />
+          California<br />
+          USA<br/r>
+          San Francisco<br />
+          California<br />
+          USA<br/r>
+          San Francisco<br />
+          California<br />
+          USA<br/r>
+          San Francisco<br />
+          California<br />
+          USA<br/r>
+
+        </address>
+      </footer>
+
+
+  </body>
+</html>

@@ -1,0 +1,415 @@
+/* Reseteo básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo de fuente general */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #ffffff;
+    line-height: 1.6;
+    background-color: #1e1e1e;
+}
+
+/* Encabezado principal con imagen de fondo */
+.hero {
+  background: url('https://i.pinimg.com/originals/dc/00/65/dc00658fa7349235fbe6075b55441fea.jpg') no-repeat center center/cover; /* Imagen de fondo */
+  background-attachment: fixed;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Capa de superposición para oscurecer la imagen */
+.hero .overlay {
+    background-color: rgba(0, 0, 0, 0.5); /* Color negro transparente */
+    padding: 2rem;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo del título */
+.hero h1 {
+    font-size: 4rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    letter-spacing: 3px;
+}
+
+/* Estilo del párrafo */
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+/* Botón estilizado */
+.btn {
+    background-color: #e74c3c; /* Rojo brillante */
+    color: white;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #000000; /* Rojo más oscuro al pasar el mouse */
+}
+
+.learn-more-button {
+    display: inline-block;
+    position: absolute; /* Esto permite mover el botón libremente */
+    bottom: 0.5px; /* Ajusta según dónde quieras colocarlo verticalmente */
+    left: 50%; /* Para centrar horizontalmente */
+    transform: translateX(-50%); /* Para centrar completamente en el eje horizontal */
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: 'Arial', sans-serif; /* Asegúrate de que coincida con la fuente que usas */
+    padding: 50px 20px;
+    border-radius: 3px;
+}
+
+.learn-more-button:after {
+    content: "\2193"; /* Flecha hacia abajo */
+    display: inline-block;
+    margin-left: 8px;
+    font-size: 16px;
+}
+  
+.scroll-down {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    border: 2px solid white;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.scroll-down:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Estilos generales */
+.information-section {
+  height: 100vh; /* Ocupa toda la altura de la pantalla */
+  max-height: 100vh; /* Limita la altura máxima a la altura de la pantalla */
+  background-color: #2e58c3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  text-align: center;
+  margin: 0; /* Elimina márgenes adicionales */
+}
+  
+.information-header {
+  margin-bottom: 40px;
+}
+
+.information-header h1 {
+  font-size: 36px;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+}
+
+/* Estilos del contenido debajo del título */
+.features-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.features-container h2 {
+  font-size: 32px;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+}
+
+.features-container p {
+  font-size: 16px;
+  color: white;
+}
+
+.separator {
+  width: 60px;
+  height: 2px;
+  background-color: white;
+  margin: 20px auto;
+}
+
+.description {
+  margin-bottom: 40px;
+}
+
+/* Estilos de los íconos */
+.features-icons {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.feature-item {
+  text-align: center;
+  color: white;
+}
+
+.feature-item i {
+  display: block;
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.diamond-icon::before {
+  content: "\1F48E"; /* Unicode para diamante 💎 */
+}
+
+.heart-icon::before {
+  content: "\2764"; /* Unicode para corazón ❤ */
+}
+
+.code-icon::before {
+  content: "\1F4BB"; /* Unicode para código 💻 */
+}
+
+.feature-item p {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.information-section {
+  opacity: 0;
+  transform: scale(0.8); /* Comienza un poco más pequeño */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Transiciones suaves */
+}
+
+.information-section.show {
+  opacity: 1;
+  transform: scale(1); /* Escala normal cuando se muestra */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ##################################
+##################################33
+#######################################*/
+
+/* Estilos generales para la sección de programas de entrenamiento */
+.training-section {
+  height: 100vh;
+  max-height: 100vh;
+  background-color: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+  margin: 0;
+}
+
+.program-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1200px;
+  gap: 20px; /* Añade espacio entre los cuadros */
+}
+
+.program-item {
+  background-color: #555;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 30%;
+  min-width: 250px;
+  margin: 10px;
+}
+
+.program-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.program-item p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 1200px) {
+  .program-item {
+      width: 45%; /* Ajustamos para pantallas medianas */
+  }
+}
+
+@media (max-width: 768px) {
+  .program-item {
+      width: 100%; /* Cuadrados en una columna para pantallas pequeñas */
+  }
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f5f5;
+}
+
+.contenedor {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.tarjeta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #2f3e46;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tarjeta.izquierda .contenido {
+  order: 2;
+}
+
+.tarjeta.derecha .contenido {
+  order: 1;
+}
+
+.imagen {
+  flex-basis: 40%;
+}
+
+.imagen img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.contenido {
+  flex-basis: 55%;
+  padding: 20px;
+}
+
+h2 {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+  font-family: 'Arial Black', sans-serif;
+}
+
+p {
+  font-size: 1em;
+  line-height: 1.6;
+  color: #d3d3d3;
+}
+
+/* Encabezado principal con imagen de fondo */
+.hero2 {
+  background: url('https://i.pinimg.com/originals/dc/00/65/dc00658fa7349235fbe6075b55441fea.jpg') no-repeat center center/cover; /* Imagen de fondo */
+  background-attachment: fixed;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Capa de superposición para oscurecer la imagen */
+.hero2 .overlay2 {
+  background-color: rgba(0, 0, 0, 0.5); /* Color negro transparente */
+  padding: 2rem;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Estilo del título */
+.hero2 h1 {
+  font-size: 4rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  letter-spacing: 3px;
+}
+
+/* Estilo del párrafo */
+.hero2 p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+/*########################
+HEADER#########*/
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
+  padding: 10px 0;
+  box-shadow: 0 0 20px 8px rgba(0, 0, 0, 0.5); /* Sombrado extendido */
+}
+.icons {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.icons li {
+  margin: 0 10px;
+}
+
+.icons a {
+  color: #fff;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.icons a:hover {
+  color: #e63946; /* Color de hover en los íconos */
+}
+
+.copyright {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0 0;
+  font-size: 0.9rem;
+  color: #bbb;
+}
